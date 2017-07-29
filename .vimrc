@@ -32,12 +32,48 @@ nmap <cr> :w<cr>
 " auto bracket {<Enter gives { cursor }
 inoremap {<CR> {}<Esc>i<CR><Esc>O
 
-" Synthastic Setting 
+" Synthastic Setting
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+
+" turn off syntax checker YouCompleteMe
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+set completeopt-=preview
+
+" adds name of the file to the vim tab
+autocmd BufEnter * let &titlestring = ' ' . expand("%:t")
+set title
+
+" theme for vim-airline
+let g:airline_theme='luna'
+" remove utf8 from vim airline
+let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
+
+set list          " lists white spaces in files
+set listchars=tab:•\ ,trail:•,extends:»,precedes:« " uses shown symbol to show white spaces
+
+function! ToggleErrors()
+    if empty(filter(tabpagebuflist(), 'getbufvar(v:val, "&buftype") is# "quickfix"'))
+         " No location/quickfix list shown, open syntastic error location panel
+         Errors
+    else
+        lclose
+    endif
+endfunction
+
+" togglelist hotkey to open/close location list
+let mapleader = ","
+nnoremap <silent> <leader>l :call ToggleErrors()<cr>
+" manual for cpp
+autocmd FileType cpp set keywordprg=cppman
+
+" toggle semantic highlight
+nnoremap <Leader>s :SemanticHighlightToggle<cr>
+let s:semanticGUIColors = [ '#72d572', '#c5e1a5', '#e6ee9c', '#fff59d', '#ffe082', '#ffcc80', '#ffab91', '#bcaaa4', '#b0bec5', '#ffa726', '#ff8a65', '#f9bdbb', '#f9bdbb', '#f8bbd0', '#e1bee7', '#d1c4e9', '#ffe0b2', '#c5cae9', '#d0d9ff', '#b3e5fc', '#b2ebf2', '#b2dfdb', '#a3e9a4', '#dcedc8' , '#f0f4c3', '#ffb74d' ]
