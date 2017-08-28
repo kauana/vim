@@ -21,7 +21,7 @@ set hlsearch
 
 " My Vim theme: Sorcery Dark
 set termguicolors
-colorscheme srcery-drk
+colorscheme Turtles
 
 " After you search for a word with /, pressing <space> cancels search
 nmap <space> :noh<cr>
@@ -75,3 +75,6 @@ nnoremap <silent> <leader>l :call ToggleErrors()<cr>
 " manual for cpp
 autocmd FileType cpp set keywordprg=cppman
 
+" change directory for swap/backup files
+set backupdir=~/.vim-tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/tmp,/var/tmp,/tmp
