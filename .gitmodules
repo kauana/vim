@@ -1,0 +1,15 @@
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "bundle/vim-srcery-drk"]
+	path = bundle/vim-srcery-drk
+	url = https://github.com/kauana/vim-srcery-drk.git
+[submodule "bundle/vim-togglelist"]
+	path = bundle/vim-togglelist
+	url = https://github.com/milkypostman/vim-togglelist.git
