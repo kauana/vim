@@ -19,7 +19,7 @@ set number
 " search highlights
 set hlsearch
 
-" My Vim theme: Sorcery Dark
+" My Vim theme: Turtles
 set termguicolors
 colorscheme Turtles
 
