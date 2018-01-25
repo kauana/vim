@@ -2,6 +2,10 @@ This repository contains all the settings and plugins I use on Vim. To install i
 
 - Use git clone to copy reposity to home directory. Make sure to clone the repository into a directory named .vim instead of vim (new name is the next  command line option after url)
 
+- git submodule update --init --recursive to download all submodules (syntastic and so on)
+
+- YouCompleteMe has a compiled component so go to https://valloric.github.io/YouCompleteMe/#installation and follow the steps to recompile it.
+
 - Since .vimrc is inside the .vim directory now, we create a symbolic link to link this .vimrc to our home directory (ln -s ~/.vim/.vimrc .vimrc)
 
 - Also, pathogen must be installed again so use the commands below to install Pathogen. All the settings necessary to make it work are already on the vimrc file:
