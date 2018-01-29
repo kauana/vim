@@ -21,7 +21,7 @@ set hlsearch
 
 " My Vim theme: Turtles
 set termguicolors
-colorscheme Turtles
+colorscheme turtles
 
 " After you search for a word with /, pressing <space> cancels search
 nmap <space> :noh<cr>
@@ -78,3 +78,6 @@ autocmd FileType cpp set keywordprg=cppman
 " change directory for swap/backup files
 set backupdir=~/.vim-tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/tmp,/var/tmp,/tmp
+
+" always open bash
+set shell=bash
