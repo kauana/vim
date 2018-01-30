@@ -16,3 +16,6 @@
 [submodule "bundle/vim-airline-themes"]
 	path = bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "/Users/kauana/.vim/bundle/vim-livedown"]
+	path = /Users/kauana/.vim/bundle/vim-livedown
+	url = git://github.com/shime/vim-livedown.git
