@@ -19,9 +19,9 @@ set number
 " search highlights
 set hlsearch
 
-" My Vim theme: Turtles
+" My Vim theme
 set termguicolors
-colorscheme turtles
+colorscheme onedark
 
 " After you search for a word with /, pressing <space> cancels search
 nmap <space> :noh<cr>
@@ -81,3 +81,8 @@ set directory=~/.vim-tmp,~/tmp,/var/tmp,/tmp
 
 " always open bash
 set shell=bash
+
+" Enable spell checking for certain file types
+autocmd FileType latex,tex,md,markdown setlocal spell
+hi clear SpellBad
+hi SpellBad cterm=underline

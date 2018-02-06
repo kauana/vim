@@ -19,3 +19,6 @@
 [submodule "/Users/kauana/.vim/bundle/vim-livedown"]
 	path = bundle/vim-livedown
 	url = git://github.com/shime/vim-livedown.git
+[submodule "bundle/awesome-vim-colorschemes"]
+	path = bundle/awesome-vim-colorschemes
+	url = https://github.com/rafi/awesome-vim-colorschemes.git
