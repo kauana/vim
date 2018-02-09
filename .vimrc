@@ -21,7 +21,8 @@ set hlsearch
 
 " My Vim theme
 set termguicolors
-colorscheme onedark
+colorscheme PaperColor
+set background=dark
 
 " After you search for a word with /, pressing <space> cancels search
 nmap <space> :noh<cr>
@@ -86,3 +87,7 @@ set shell=bash
 autocmd FileType latex,tex,md,markdown setlocal spell
 hi clear SpellBad
 hi SpellBad cterm=underline
+
+" Automatic word wrapping at 80 characters
+set fo+=t
+set textwidth=80
