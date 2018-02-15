@@ -91,3 +91,11 @@ hi SpellBad cterm=underline
 " Automatic word wrapping at 80 characters
 set fo+=t
 set textwidth=80
+:set colorcolumn=80
+
+" Persistent undo
+set undofile
+set undodir=$HOME/.vim/undo
+
+set undolevels=1000
+set undoreload=10000
