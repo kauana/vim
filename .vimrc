@@ -95,10 +95,10 @@ hi SpellBad cterm=underline
 
 " Automatic word wrapping at 80 characters
 set fo+=t
-set textwidth=80
+"set textwidth=80
 :set colorcolumn=80
 
-" Persistent undo
+" Persistent undo (must have an undo dir: mkdir ~/.vim/undo for it to work)
 set undofile
 set undodir=$HOME/.vim/undo
 
