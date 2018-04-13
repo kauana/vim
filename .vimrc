@@ -7,8 +7,10 @@ set nocompatible
 
 set expandtab       " doesnt use tab characters
 set softtabstop=4   " when I press tab it puts 4 spaces instead
+set tabstop=4
 set backspace=indent,eol,start
 set shiftwidth=4    " indenting 4 spaces
+set smarttab
 
 set autoindent  " indent automatically
 set smartindent " automatically inserts one extra level of indentation in some cases
@@ -47,6 +49,9 @@ let g:syntastic_check_on_wq = 0
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 set completeopt-=preview
+
+" Change foreground and background colors YouCompleteMe
+highlight Pmenu ctermfg=15 ctermbg=0 guifg=#bcbcbc guibg=#444444
 
 " adds name of the file to the vim tab
 autocmd BufEnter * let &titlestring = ' ' . expand("%:t")
@@ -99,3 +104,9 @@ set undodir=$HOME/.vim/undo
 
 set undolevels=1000
 set undoreload=10000
+
+" Rainbow Parentheses plugin
+"let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+
+autocmd BufRead,BufNewFile *.l set filetype=lisp lisp
+autocmd BufRead,BufNewFile *.pl set filetype=prolog
